@@ -12,6 +12,9 @@ let newarr = [10, 20, 30, 40, 50];
 
 for (let v in newarr)
 {
-  console.log(v);
+  if (newarr.hasOwnProperty(v))    // protype values doesn't have hasownProperty = true
+  {
+        console.log(v);
+  }
 }
 
