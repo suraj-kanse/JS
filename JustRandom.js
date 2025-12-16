@@ -9,14 +9,19 @@
 Array.prototype.extraProp = "SURAJ";
 Array.prototype.extraProperty2 = "KANSE";
 
-let newarr = [10, 20, 30, 40, 50];
+const newarr = [10, 20, 30, 40, 50];
 console.log(newarr);
 
-for (let v in newarr)
+for (let i in newarr)
 {
-  if (newarr.hasOwnProperty(v))    // protype values doesn't have hasownProperty = true
+  console.log(i)
+}
+
+for (let i in newarr)
+{
+  if (newarr.hasOwnProperty(i))    // protype values doesn't have hasownProperty = true
   {
-        console.log(v);
+        console.log(i);
   }
 }
 
