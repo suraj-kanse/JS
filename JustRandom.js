@@ -7,8 +7,10 @@
 // and loop in tyhe original properties of the array
 
 Array.prototype.extraProp = "SURAJ";
+Array.prototype.extraProperty2 = "KANSE";
 
 let newarr = [10, 20, 30, 40, 50];
+console.log(newarr);
 
 for (let v in newarr)
 {
