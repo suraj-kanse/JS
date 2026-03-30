@@ -6,3 +6,31 @@ In JavaScript, there are three main ways to reserve space in memory-
 Why Should We Stop Using var?
 In older JavaScript code, everyone used var. But it had a major flaw: it doesn't respect "Block Scope".
 A block scope is just the area between curly braces {}. If one programmer created a var accountPassword at the top of a file, and another programmer accidentally created another var accountPassword inside an if statement block, the second one would overwrite the first one everywhere! This caused massive, hard-to-track bugs. let and const were introduced to fix this block scope issue perfectly.
+
+```// 01_variables.js
+
+// 1. Using 'const' - The value is locked and cannot be mutated
+const accountId = 144553; 
+
+// 2. Using 'let' - The value can be updated later
+let accountEmail = "hitesh@hc.com";
+let accountPassword = "12345";
+
+// 3. Using 'var' - Avoid using this because of scope issues!
+var accountCity = "Jaipur";
+
+// 4. Declaring without a keyword - Possible in JS, but TERRIBLE practice
+accountState = "Rajasthan";
+
+// 5. Declaring but NOT assigning a value
+let accountCountry; 
+
+/* --- Modifying the data --- */
+
+// accountId = 2; // ❌ NOT ALLOWED! This will crash the app because it's a const.
+accountEmail = "hc@hc.com"; // ✅ Allowed because we used 'let'
+accountPassword = "212121"; // ✅ Allowed
+accountCity = "Bengaluru";  // ✅ Allowed, but again, avoid var
+
+// Printing everything easily using a table format
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState, accountCountry]);```
