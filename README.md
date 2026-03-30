@@ -1,5 +1,4 @@
 In JavaScript, there are three main ways to reserve space in memory-
-
 -- const (Constant): Use this for values that should never change once they are set. If you try to overwrite a const value later, JavaScript will throw a strict error.
 -- let: Use this for values that might change or update later on. For example, a user might decide to change their email address or update their password.
 -- var: The old way of declaring variables. Never use this anymore.
