@@ -12,7 +12,6 @@ In older JavaScript code, everyone used var. But it had a major flaw: it doesn't
 A block scope is just the area between curly braces {}. If one programmer created a var accountPassword at the top of a file, and another programmer accidentally created another var accountPassword inside an if statement block, the second one would overwrite the first one everywhere! This caused massive, hard-to-track bugs. let and const were introduced to fix this block scope issue perfectly.
 
 ```
-
 // 1. Using 'const' - The value is locked and cannot be mutated
 const accountId = 144553; 
 
@@ -37,7 +36,8 @@ accountPassword = "212121"; // ✅ Allowed
 accountCity = "Somewhere";  // ✅ Allowed, but again, avoid var
 
 // Printing everything easily using a table format
-console.table([accountId, accountEmail, accountPassword, accountCity, accountState, accountCountry]);```
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState, accountCountry]);
+```
 
 
 alert("hello") works in the browser because the JS engine is embedded there and has a document object. It will throw an error in Node.js because there is no browser window to pop up
