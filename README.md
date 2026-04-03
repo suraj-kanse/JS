@@ -42,4 +42,12 @@ console.table([accountId, accountEmail, accountPassword, accountCity, accountSta
 
 alert("hello") works in the browser because the JS engine is embedded there and has a document object. It will throw an error in Node.js because there is no browser window to pop up
 
-
+Data Types:
+-- number
+-- bigint: For big/massive numbers.
+-- string: Text in quotes (single or double).
+-- boolean: true or false.
+-- null: A standalone value representing an intentional empty value [12:36]. Analogy: Asking a server for temperature. If it returns 0, that's a valid temperature. If it fails, it should return null (empty), not 0.
+-- undefined: A variable is declared but no value is assigned yet.
+-- symbol: Used for uniqueness, heavily used in React (Figma tools, etc.) to identify specific components uniquely.
+-- object: Complex data structures.
