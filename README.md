@@ -71,4 +71,9 @@ console.log(typeof null); // Outputs: "object", often considered a bug
 
 "33" easily converts to the number 33
 "33abc" converts to NaN (Not a Number)
-Even though its value is NaN, if you check typeof NaN, JS will still tell you it is a "number".
+Even though its value is NaN, if you check typeof NaN, JS will still tell you it is a "number"
+
+null converts to 0. (Be careful with this if you are calculating temperatures or scores where 0 means something specific!).
+Undefined: undefined converts to NaN.
+Booleans: true converts to 1, and false converts to 0.
+Text: A regular string like "SURAJ" converts to NaN.
