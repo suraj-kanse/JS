@@ -77,3 +77,20 @@ null converts to 0. (Be careful with this if you are calculating temperatures or
 Undefined: undefined converts to NaN.
 Booleans: true converts to 1, and false converts to 0.
 Text: A regular string like "SURAJ" converts to NaN.
+
+Coverting Booleans- 
+```
+let isLoggedIn = 1;
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+
+console.log(booleanIsLoggedIn); // Outputs: true
+```
+Converting to Strings-
+```
+let someNumber = 33;
+let stringNumber = String(someNumber);
+
+console.log(stringNumber);        // Outputs: 33
+console.log(typeof stringNumber); // Outputs: "string"
+```
+
