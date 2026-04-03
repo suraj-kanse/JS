@@ -68,3 +68,7 @@ console.log(typeof age); // Outputs: "number"
 console.log(typeof state); // Outputs: "undefined"
 console.log(typeof null); // Outputs: "object", often considered a bug
 ```
+
+"33" easily converts to the number 33
+"33abc" converts to NaN (Not a Number)
+Even though its value is NaN, if you check typeof NaN, JS will still tell you it is a "number".
