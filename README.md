@@ -51,3 +51,20 @@ Data Types:
 -- undefined: A variable is declared but no value is assigned yet.
 -- symbol: Used for uniqueness, heavily used in React (Figma tools, etc.) to identify specific components uniquely.
 -- object: Complex data structures.
+
+JavaScript allows you to write messy code without semicolons or put multiple commands on a single line. Don't do it. Your highest priority as a developer should be writing code that is clean and easily readable by other humans
+
+MDN (Mozilla Developer Network): Your daily driver. It's the easiest and most practical place to read about JS features
+
+```
+"use strict"; // Treat all JS code as newer version
+
+let name = "Hitesh"; // string
+let age = 18;        // number
+let isLoggedIn = false; // boolean
+let state;           // undefined
+
+console.log(typeof age); // Outputs: "number"
+console.log(typeof state); // Outputs: "undefined"
+console.log(typeof null); // Outputs: "object", often considered a bug
+```
