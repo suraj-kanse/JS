@@ -40,4 +40,6 @@ accountCity = "Somewhere";  // ✅ Allowed, but again, avoid var
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState, accountCountry]);```
 
 
+alert("hello") works in the browser because the JS engine is embedded there and has a document object. It will throw an error in Node.js because there is no browser window to pop up
+
 
