@@ -114,3 +114,16 @@ If the string comes first, everything after it is treated as a string.
 
 If the numbers come first, the math is executed until a string is encountered, and then it concatenates.
 
+```
+// 1. Simple mixing
+console.log("1" + 2); // Outputs: "12"
+console.log(1 + "2"); // Outputs: "12"
+
+// 2. The Tricky Scenarios
+// String is first: Everything is concatenated as text
+console.log("1" + 2 + 2); // Outputs: "122" 
+
+// Numbers are first: Math happens first (1+2=3), then it's glued to the string
+console.log(1 + 2 + "2"); // Outputs: "32"
+```
+
