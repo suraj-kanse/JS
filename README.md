@@ -179,3 +179,24 @@ const myFunction = function() {
     console.log("Hello JS from Suraj");
 }
 ```
+
+Memory allocation in modern languages like JavaScript happens automatically (unlike older languages like C where you have to manually reserve and free up space). However, understanding how JavaScript stores your data under the hood is crucial for avoiding confusing bugs. JavaScript uses two distinct types of memory spaces: Stack and Heap.
+
+
+The type of memory JavaScript uses depends entirely on the data type (Primitive vs. Non-Primitive).
+
+- Stack Memory (Used for Primitive Types)
+
+-- What it stores: All primitive values (String, Number, Boolean, Null, Undefined, Symbol, BigInt).
+
+-- How it works (The "Copy" Rule): When you assign a primitive variable to another variable, JavaScript gives you a brand new copy of the original value.
+
+-- The Result: Changing the new variable does not affect the original variable. They live in two completely separate, independent spaces in the Stack.
+
+- Heap Memory (Used for Non-Primitive/Reference Types)
+
+-- What it stores: All non-primitive values (Arrays, Objects, Functions).
+
+-- How it works (The "Reference" Rule): When you assign a non-primitive variable to another, JavaScript does not give you a copy of the actual data. Instead, it gives you a reference (a pointer/address) that looks at the exact same data box in the Heap.
+
+-- The Result: Changing the new variable will alter the original variable because they both point to the exact same underlying data.
