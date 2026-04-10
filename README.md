@@ -200,3 +200,16 @@ The type of memory JavaScript uses depends entirely on the data type (Primitive 
 -- How it works (The "Reference" Rule): When you assign a non-primitive variable to another, JavaScript does not give you a copy of the actual data. Instead, it gives you a reference (a pointer/address) that looks at the exact same data box in the Heap.
 
 -- The Result: Changing the new variable will alter the original variable because they both point to the exact same underlying data.
+
+```
+let Name = "Suraj";
+let anotherName = myName; // A fresh copy is created in the Stack
+
+// Let's modify the copied variable
+anotherName = "sURAJ";
+
+// The original stays exactly the same!
+console.log(Name); // Outputs: "Suraj"
+console.log(anotherName);   // Outputs: "sURAJ"
+```
+
