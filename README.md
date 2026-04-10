@@ -201,6 +201,8 @@ The type of memory JavaScript uses depends entirely on the data type (Primitive 
 
 -- The Result: Changing the new variable will alter the original variable because they both point to the exact same underlying data.
 
+
+Stack Eg.-
 ```
 let Name = "Suraj";
 let anotherName = myName; // A fresh copy is created in the Stack
@@ -211,5 +213,23 @@ anotherName = "sURAJ";
 // The original stays exactly the same!
 console.log(Name); // Outputs: "Suraj"
 console.log(anotherName);   // Outputs: "sURAJ"
+```
+
+Heap Eg.- 
+```
+let userOne = {
+    email: "user@google.com",
+    upi: "user@avcoe"
+};
+
+// userTwo doesn't get a copy of the object. It gets a line pointing to userOne's data.
+let userTwo = userOne; 
+
+// Let's modify a property using the second variable
+userTwo.email = "suraj@college.com";
+
+// Both variables reflect the change because they look at the exact same Heap memory!
+console.log(userOne.email); // Outputs: "suraj@college.com"
+console.log(userTwo.email); // Outputs: "suraj@college.com"
 ```
 
