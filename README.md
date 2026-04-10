@@ -233,3 +233,7 @@ console.log(userOne.email); // Outputs: "suraj@college.com"
 console.log(userTwo.email); // Outputs: "suraj@college.com"
 ```
 
+🚀 Quick Summary
+Primitives go to the Stack. You get a copy. What happens in the copy, stays in the copy.
+
+Non-Primitives go to the Heap. You get a reference. Modifying the reference modifies the original data for everyone pointing to it.
