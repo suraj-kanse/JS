@@ -127,3 +127,10 @@ console.log("1" + 2 + 2); // Outputs: "122"
 console.log(1 + 2 + "2"); // Outputs: "32"
 ```
 
+From an official documentation and interview perspective, JavaScript data types are strictly divided into just two main categories: Primitive and Non-Primitive (Reference).
+
+how the data is stored in memory and how you access it.
+
+⚡ JavaScript is a "Dynamically Typed" Language
+In languages like C++ or Java, you have to explicitly tell the computer what type of data a variable will hold (e.g., int score = 100;). JavaScript is smart enough to figure it out on the fly. You just write let score = 100; and JS knows it's a number. You don't have to define the type, making it a dynamically typed language.
+
