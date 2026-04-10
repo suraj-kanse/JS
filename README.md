@@ -94,3 +94,23 @@ console.log(stringNumber);        // Outputs: 33
 console.log(typeof stringNumber); // Outputs: "string"
 ```
 
+Operations in JS (like +, -, *) are easy until you mix data types. Relying on JS to auto-convert types can lead to buggy, unreadable code. Write clean, explicit code using parentheses rather than trying to act "smart" with confusing syntax.
+
+Basic Operations: Standard math works as expected (2+2, 2-2, 2*2, 2**3 for power, 2/3, 2%3 for remainder).
+
+String Concatenation: "hello" + " suraj" works perfectly.
+
+"1" + 2 -> "12" (string wins)
+
+1 + "2" -> "12" (string wins)
+
+"1" + 2 + 2 -> "122" (If string is first, everything is treated as a string)
+
+1 + 2 + "2" -> "32" (Math happens first, then string concatenation).
+
+The Golden Rule:
+
+If the string comes first, everything after it is treated as a string.
+
+If the numbers come first, the math is executed until a string is encountered, and then it concatenates.
+
