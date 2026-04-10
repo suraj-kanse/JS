@@ -134,3 +134,48 @@ how the data is stored in memory and how you access it.
 ⚡ JavaScript is a "Dynamically Typed" Language
 In languages like C++ or Java, you have to explicitly tell the computer what type of data a variable will hold (e.g., int score = 100;). JavaScript is smart enough to figure it out on the fly. You just write let score = 100; and JS knows it's a number. You don't have to define the type, making it a dynamically typed language.
 
+🧱 1. Primitive Data Types (Call by Value)
+When you copy a primitive data type from one variable to another, JavaScript gives you a completely independent copy of the original value. Changing the copy does not change the original data.
+
+There are exactly 7 Primitive Data Types:
+
+String: Text data.
+
+Number: Covers both regular integers (100) and decimal/float values (100.3). There is no separate "float" type in JS.
+
+Boolean: true or false.
+
+Null: An explicit representation of an empty value (like an intentionally empty temperature reading, not 0).
+
+Undefined: A variable has been declared, but you haven't put anything inside it yet.
+
+Symbol: Used to make a value completely, mathematically unique. Even if you pass the exact same string into two symbols, they will not equal each other.
+
+BigInt: Used for massive numbers (like scientific data). You define it by simply adding an n to the end of the number.
+
+🔗 2. Non-Primitive Data Types (Reference Types)
+When you assign these to a variable, JavaScript doesn't give you a copy of the data. Instead, it gives you a reference (a memory address) pointing to where that data lives.
+
+There are 3 Main Reference Types:
+
+Array: A list of items grouped together inside square brackets [].
+
+Object: Data stored in key-value pairs inside curly braces {}. (Pro-tip: The instructor noted that mastering Objects and Browser Events is the secret to mastering JavaScript!)
+
+Function: Reusable blocks of code. In JavaScript, you can treat functions exactly like variables and store them in memory.
+
+```
+// Array
+const tasks = ["programming", "communication", "personality"];
+
+// Object
+let myObj = {
+    name: "SURAJ",
+    age: 21,
+}
+
+// Function treated as a variable
+const myFunction = function() {
+    console.log("Hello JS from Suraj");
+}
+```
