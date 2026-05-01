@@ -237,3 +237,16 @@ console.log(userTwo.email); // Outputs: "suraj@college.com"
 Primitives go to the Stack. You get a copy. What happens in the copy, stays in the copy.
 
 Non-Primitives go to the Heap. You get a reference. Modifying the reference modifies the original data for everyone pointing to it.
+
+
+Today, you should use Backticks (`). This enables String Interpolation, which means you can create placeholders and inject variables directly into the string using the ${} syntax. It is much more readable and reliable.
+
+```
+const name = "suraj";
+const repoCount = 50;
+
+// Clean, readable, and modern syntax
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+```
+
+
