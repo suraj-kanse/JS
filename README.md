@@ -256,3 +256,30 @@ const Name = new String('suraj-k');
 ```
 
 
+String Methods
+
+When you define a string, JavaScript automatically attaches dozens of hidden functions (methods) to it via its Prototype. You don't need to memorize them all, but you must know how to use the common ones.
+Note: Because strings are primitive data types (stored in Stack memory), these methods do not alter the original string. They return a brand new copy.
+
+1. Accessing Characters & Length
+
+Name.length: Returns the total number of characters.
+
+Name[0]: Accesses the first character (strings are zero-indexed).
+
+Name.charAt(2): Finds the character at a specific index.
+
+Name.indexOf('t'): Finds the index number of a specific character.
+
+2. Formatting Text
+
+Name.toUpperCase(): Converts the entire string to uppercase.
+
+Name.toLowerCase(): Converts the entire string to lowercase.
+
+3. Extracting Parts of a String
+
+substring(start, end): Extracts characters between two indices. It ignores negative numbers (treats them as 0). Note: The end index is NOT included in the final output.
+
+slice(start, end): Similar to substring, but it accepts negative values which allows you to start extracting from the end of the string backwards.
+
