@@ -249,4 +249,10 @@ const repoCount = 50;
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 ```
 
+Declaring as an Object
+You can also declare a string using the new keyword. While it yields the same text, it creates a String Object, which exposes exactly how JavaScript organizes strings under the hood (as key-value pairs where the index is the key).
+```
+const Name = new String('suraj-k');
+```
+
 
