@@ -283,3 +283,13 @@ substring(start, end): Extracts characters between two indices. It ignores negat
 
 slice(start, end): Similar to substring, but it accepts negative values which allows you to start extracting from the end of the string backwards.
 
+```
+const name = new String('suraj-k');
+
+const newString = name.substring(0, 4);
+console.log(newString); // Outputs: "sura" (Indices 0, 1, 2, 3)
+
+const anotherString = name.slice(-8, 4); // Slicing from the reverse
+```
+
+
