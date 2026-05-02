@@ -327,3 +327,11 @@ split(separator): Divides a string into an ordered list based on a specific char
 const name = "suraj-sk-com";
 console.log(name.split('-')); // Outputs: ["suraj", "sk", "com"]
 ```
+
+Quick Summary & Homework
+
+Stop using + to build strings. Start using backticks `` and ${}.
+
+Remember that string methods return a new value; they do not overwrite the original variable.
+
+Tips: explore the MDN documentation. and there are many more string operations are there You don't have to learn them all, just know they exist!
