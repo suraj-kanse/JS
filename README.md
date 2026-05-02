@@ -59,7 +59,7 @@ MDN (Mozilla Developer Network): Your daily driver. It's the easiest and most pr
 ```
 "use strict"; // Treat all JS code as newer version
 
-let name = "Hitesh"; // string
+let name = "suraj"; // string
 let age = 18;        // number
 let isLoggedIn = false; // boolean
 let state;           // undefined
@@ -300,4 +300,21 @@ trim(): Removes leading and trailing whitespace. (You can also use trimStart() o
 ```
 const newStringOne = "   suraj    ";
 console.log(newStringOne.trim()); // Outputs: "suraj"
+```
+
+
+5. Replacing and Searching
+URLs cannot contain empty spaces. Browsers often convert spaces into messy codes like %20.
+
+replace(searchFor, replaceWith): Swaps out a specific value.
+
+includes(keyword): Returns a boolean (true/false) if the string contains the keyword.
+```
+const url = "https://suraj.com/suraj%20kanse";
+
+// Let's clean up the URL
+console.log(url.replace('%20', '-')); // Outputs: "https://suraj.com/suraj-kanse"
+
+// Does the URL contain a specific word?
+console.log(url.includes('girlfriend')); // Outputs: false
 ```
