@@ -292,4 +292,12 @@ console.log(newString); // Outputs: "sura" (Indices 0, 1, 2, 3)
 const anotherString = name.slice(-8, 4); // Slicing from the reverse
 ```
 
+4. Sanitizing Data (Trimming Space)
+When users fill out forms (like an email input), they accidentally add spaces. You must clean this data before sending it to a database.
 
+trim(): Removes leading and trailing whitespace. (You can also use trimStart() or trimEnd()).
+
+```
+const newStringOne = "   suraj    ";
+console.log(newStringOne.trim()); // Outputs: "suraj"
+```
