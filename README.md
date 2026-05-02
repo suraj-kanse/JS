@@ -318,3 +318,12 @@ console.log(url.replace('%20', '-')); // Outputs: "https://suraj.com/suraj-kanse
 // Does the URL contain a specific word?
 console.log(url.includes('girlfriend')); // Outputs: false
 ```
+
+6. Converting a String into an Array
+Sometimes you have a long string separated by dashes or commas, and you want to turn it into an array (list) of separate words.
+
+split(separator): Divides a string into an ordered list based on a specific character.
+```
+const name = "suraj-sk-com";
+console.log(name.split('-')); // Outputs: ["suraj", "sk", "com"]
+```
