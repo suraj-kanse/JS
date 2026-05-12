@@ -328,10 +328,25 @@ const name = "suraj-sk-com";
 console.log(name.split('-')); // Outputs: ["suraj", "sk", "com"]
 ```
 
-Quick Summary & Homework
-
+Quick Summary-
 Stop using + to build strings. Start using backticks `` and ${}.
 
 Remember that string methods return a new value; they do not overwrite the original variable.
 
 Tips: explore the MDN documentation. and there are many more string operations are there You don't have to learn them all, just know they exist!
+
+
+Handling numbers in JavaScript is generally straightforward, but for real-world applications (like e-commerce carts, banking apps, or games), you need precision. JavaScript gives us powerful built-in methods on the Number prototype to format data cleanly, and a dedicated Math library to perform complex calculations, rounding, and random number generation.
+
+Declaring Numbers: Primitive vs. Object : 
+Normally, JavaScript automatically detects numbers. However, if you want absolute certainty that a variable is treated strictly as a number (which grants access to specific object methods), you can use the new keyword.
+```
+// 1. Primitive approach (Auto-detected, highly recommended for everyday use)
+const score = 400;
+
+// 2. Object approach (Guaranteed Number type)
+const balance = new Number(100);
+```
+
+
+
