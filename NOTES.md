@@ -355,6 +355,7 @@ When working with money or analytics, raw numbers usually look messy. These meth
 toString(): Converts the number to a string. This is incredibly useful because once converted, you can measure its length (e.g., checking if an OTP is exactly 4 digits long using .length).
 
 toFixed(digits): An absolute must-have for e-commerce. It locks the number to a specific amount of decimal places (e.g., balance.toFixed(2) outputs "100.00").
+-- Use toFixed(2) to keep UI prices looking clean and professional.
 
 toPrecision(digits): Formats a number to a precise length. Use with caution—it focuses on the total number of digits, not just the decimals, which can cause scientific notation if used improperly on large numbers.
 
@@ -373,4 +374,18 @@ Math.floor(4.9): Floor rounding (always rounds down to 4).
 
 Math.min(4, 3, 6, 8) / Math.max(...): Instantly finds the lowest or highest value in a sequence.
 
+🎲 The Famous Math.random() Trick (Real-world Use Case)
+
+Math.random() automatically generates a random decimal between 0 and 1. But if you are building a dice roller or picking a random winner, you need a whole number between a specific minimum and maximum.
+You will use it repeatedly for random mechanics, game logic, and dynamic UI generation.
+
+Here is the standard industry formula everyone memorizes:
+```
+const min = 10;
+const max = 20;
+
+// Generates a random integer exactly between min and max (inclusive)
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+```
+Why it works: Multiplying by (max - min + 1) scales the decimal up to your desired range. Math.floor() chops off the decimals to make it a clean integer, and adding + min at the end guarantees the final result will never fall below your required minimum limit.
 
