@@ -347,6 +347,30 @@ const score = 400;
 // 2. Object approach (Guaranteed Number type)
 const balance = new Number(100);
 ```
+(Pro-Tip: If you print balance in the browser console, it shows up as an object, revealing a massive list of hidden Prototype methods you can use!)
 
+Essential Number Methods: 
+When working with money or analytics, raw numbers usually look messy. These methods help format them perfectly for the user interface:
+
+toString(): Converts the number to a string. This is incredibly useful because once converted, you can measure its length (e.g., checking if an OTP is exactly 4 digits long using .length).
+
+toFixed(digits): An absolute must-have for e-commerce. It locks the number to a specific amount of decimal places (e.g., balance.toFixed(2) outputs "100.00").
+
+toPrecision(digits): Formats a number to a precise length. Use with caution—it focuses on the total number of digits, not just the decimals, which can cause scientific notation if used improperly on large numbers.
+
+toLocaleString(): Makes large numbers readable by inserting commas. By default, it uses the US system (1,000,000). To use the Indian numbering system, simply pass 'en-IN' inside the parentheses (10,00,000).
+
+🧮 The Built-in Math Object
+You don't need to import external libraries for basic calculations; the Math object is always available.
+
+Math.abs(-4): Absolute value (turns negatives into positives ➔ 4).
+
+Math.round(4.6): Standard rounding (rounds to 5).
+
+Math.ceil(4.2): Ceiling rounding (always rounds up to 5).
+
+Math.floor(4.9): Floor rounding (always rounds down to 4).
+
+Math.min(4, 3, 6, 8) / Math.max(...): Instantly finds the lowest or highest value in a sequence.
 
 
