@@ -408,18 +408,29 @@ Interview Trap: If someone asks you typeof myDate, the answer is strictly object
 
 If you simply print myDate, it looks like a massive, unreadable string of timezones. We use built-in methods to make it UI-friendly:
 
-myDate.toString() ➔ Shows day, date, time, and timezone.
+- myDate.toString() ➔ Shows day, date, time, and timezone.
 
-myDate.toDateString() ➔ Keeps it clean: just the day and date (e.g., Mon Jan 23 2023).
+- myDate.toDateString() ➔ Keeps it clean: just the day and date (e.g., Mon Jan 23 2023).
 
-myDate.toLocaleString() ➔ Formats to a clean local string (e.g., 1/23/2023, 5:30:00 AM).
+- myDate.toLocaleString() ➔ Formats to a clean local string (e.g., 1/23/2023, 5:30:00 AM).
 
 
 📅 Creating Specific Dates (The "Zero-Index" Confusion)
 
 When you want to declare a specific date (like a user's birthday), you pass arguments into new Date(). But there is a massive quirk here: Months in JavaScript are 0-indexed.
 
-January is 0, February is 1, December is 11.
+- January is 0, February is 1, December is 11.
+
+```
+// Format: Year, Month (0-indexed), Date
+let myCreatedDate = new Date(2023, 0, 23); 
+console.log(myCreatedDate.toDateString()); // Outputs: Mon Jan 23 2023
+
+// ⚠️ EXCEPTION: If you use a "YYYY-MM-DD" string format, months start from 1!
+let stringDate = new Date("2023-01-14");
+```
+
+
 
 
 
