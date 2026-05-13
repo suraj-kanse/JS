@@ -438,7 +438,11 @@ let stringDate = new Date("2023-01-14");
 let myTimeStamp = Date.now();
 console.log(myTimeStamp); // Outputs a massive number like 1674488...
 ```
-
+⚠️ The Interview Question: "How do you convert this millisecond timestamp into seconds?"
+You divide by 1000, but that leaves you with decimal values. You must wrap it in Math.floor() to round it down to a clean integer.
+```
+console.log(Math.floor(Date.now() / 1000));
+```
 
 
 
