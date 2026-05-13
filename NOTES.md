@@ -430,8 +430,14 @@ console.log(myCreatedDate.toDateString()); // Outputs: Mon Jan 23 2023
 let stringDate = new Date("2023-01-14");
 ```
 
+⏱️ Timestamps & The "Seconds" Interview Trick
 
-
+- Timestamps are crucial for designing apps where time matters (like figuring out who clicked a button first in a game). 
+- Date.now() gives you the exact milliseconds passed since midnight on January 1, 1970.
+```
+let myTimeStamp = Date.now();
+console.log(myTimeStamp); // Outputs a massive number like 1674488...
+```
 
 
 
