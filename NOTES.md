@@ -402,6 +402,7 @@ let myDate = new Date();
 ```
 
 Interview Trap: If someone asks you typeof myDate, the answer is strictly object. It is not a special "date" data type.
+- typeof Date evaluates to an object.
 
 
 🛠️ Formatting the Output
@@ -444,7 +445,20 @@ You divide by 1000, but that leaves you with decimal values. You must wrap it in
 console.log(Math.floor(Date.now() / 1000));
 ```
 
+🔧 Customizing toLocaleString (Pro-Tip):
+If you want to extract just the month or the day, you can use .getMonth() (remember to add + 1 if you are showing it to a user so they don't see January as 0).
+- When writing dates manually with commas (2023, 0, 23), months start at 0. When writing them as strings ("2023-01-23"), they start at 1
 
+But the absolute best way to format a custom date for your website is by passing an object into toLocaleString().
+```
+let newDate = new Date();
+
+// Getting fully customized, readable text
+newDate.toLocaleString('default', {
+    weekday: "long", // Outputs the full word "Monday" instead of just "Mon"
+    timeZone: "Asia/Kolkata" 
+});
+```
 
 
 
