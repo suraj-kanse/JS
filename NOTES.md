@@ -389,3 +389,32 @@ console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 ```
 Why it works: Multiplying by (max - min + 1) scales the decimal up to your desired range. Math.floor() chops off the decimals to make it a clean integer, and adding + min at the end guarantees the final result will never fall below your required minimum limit.
 
+
+
+Date & Time in Depth
+
+Working with Dates in JavaScript is famously quirky, but it doesn't have to be intimidating. The Date object gives us the exact time right down to the millisecond, calculated from a universal starting point (January 1, 1970). By understanding how JavaScript indexes months and learning a few formatting tricks, you can easily handle everything from hotel booking systems to quiz timers.
+
+🕒 Creating Dates & The typeof Trap
+To get the current date and time, we use the new keyword to create an instance of the Date object.
+```
+let myDate = new Date();
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
