@@ -466,7 +466,15 @@ Arrays in JavaScript are incredibly flexible. Unlike some older programming lang
 
 JavaScript array-copy operations create **shallow copies**. Because arrays are Reference (Non-Primitive) data types, assigning an array to a new variable doesn't duplicate the data. If you change the new array, the original array will also change because they share the exact same address in Heap memory.
 
+```
+// Array Declarstion
+// 1. Bracket Notation (Standard & Recommended)
+const myArr = [0, 1, 2, 3, 4, 5];
+const mixedArr = ["suraj", 1, true];
 
+// 2. The Array Object
+const myArr2 = new Array(1, 2, 3, 4);
+```
 
 
 
