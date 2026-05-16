@@ -476,6 +476,12 @@ const mixedArr = ["suraj", 1, true];
 const myArr2 = new Array(1, 2, 3, 4);
 ```
 
+🛠️ Essential Array Methods:
+These are the everyday tools you'll use to add, remove, and query data inside arrays.
+
+- push(value) & pop(): Work at the end of the array. push adds a value to the back, pop removes the last value. (These are highly optimized and fast).
+
+- unshift(value) & shift(): Work at the start of the array. unshift forces a value to the front, shift removes the very first value.
 
 
 
