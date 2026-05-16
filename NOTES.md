@@ -521,6 +521,24 @@ console.log(scores.indexOf(99)); // Output: -1
 ```
 
 - join(): Binds all the elements of an array together into a single string separated by commas. (Beware: this changes the data type from object to string).
+```
+const words = ["JavaScript", "is", "awesome"];
+
+// Default behavior: glues them together with commas
+console.log(words.join()); 
+// Output: "JavaScript,is,awesome"
+
+// Passing an empty string: glues them together with no space
+console.log(words.join("")); 
+// Output: "JavaScriptisawesome"
+
+// Passing a specific separator (like a space or a dash)
+console.log(words.join(" ")); 
+// Output: "JavaScript is awesome"
+
+console.log(words.join(" - ")); 
+// Output: "JavaScript - is - awesome"
+```
 
 
 **Interview Question: slice() vs splice()**
