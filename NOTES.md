@@ -496,6 +496,14 @@ myArr.shift();      // [10, 20, 30]
 - Insight: Try to avoid using unshift() on massive arrays. Because it forcefully adds an item to the very beginning, the computer has to recalculate and shift the index number of every single other element in the array, which drains performance.
 
 - includes(value): Returns a simple true or false if the exact value exists in the array.
+```
+const myArr = [10, 20, 30];
+console.log(myArr.includes("30")); // Output: true
+console.log(myArr.includes("40")); // Output: false
+// You can also pass a second argument to tell it where to start searching
+// Start looking from index 2 onwards
+console.log(myArr.includes("10", 2)); // Output: false
+```
 
 - indexOf(value): Returns the index number of a value. If the value doesn't exist, it defaults to returning -1.
 
