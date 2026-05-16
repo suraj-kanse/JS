@@ -480,12 +480,26 @@ const myArr2 = new Array(1, 2, 3, 4);
 These are the everyday tools you'll use to add, remove, and query data inside arrays.
 
 - push(value) & pop(): Work at the end of the array. push adds a value to the back, pop removes the last value. (These are highly optimized and fast).
+```
+const myArr = [10, 20, 30];
+myArr.push(40);     // [10, 20, 30, 40]
+myArr.pop();        // [10, 20, 30]
+```
 
 - unshift(value) & shift(): Work at the start of the array. unshift forces a value to the front, shift removes the very first value.
+```
+const myArr = [10, 20, 30];
+myArr.unshift(9);   // [9, 10, 20, 30]
+myArr.shift();      // [10, 20, 30]
+```
 
 - Insight: Try to avoid using unshift() on massive arrays. Because it forcefully adds an item to the very beginning, the computer has to recalculate and shift the index number of every single other element in the array, which drains performance.
 
+- includes(value): Returns a simple true or false if the exact value exists in the array.
 
+- indexOf(value): Returns the index number of a value. If the value doesn't exist, it defaults to returning -1.
+
+- join(): Binds all the elements of an array together into a single string separated by commas. (Beware: this changes the data type from object to string).
 
 
 
