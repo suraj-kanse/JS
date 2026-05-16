@@ -506,6 +506,19 @@ console.log(myArr.includes("10", 2)); // Output: false
 ```
 
 - indexOf(value): Returns the index number of a value. If the value doesn't exist, it defaults to returning -1.
+```
+const scores = [10, 20, 30, 40, 20];
+
+// Finding the index of an existing item
+console.log(scores.indexOf(30)); // Output: 2
+
+// What if the element appears more than once? 
+// It stops at the very first one it finds.
+console.log(scores.indexOf(20)); // Output: 1
+
+// What happens if the value doesn't exist?
+console.log(scores.indexOf(99)); // Output: -1
+```
 
 - join(): Binds all the elements of an array together into a single string separated by commas. (Beware: this changes the data type from object to string).
 
