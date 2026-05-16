@@ -464,6 +464,9 @@ ARRAYS:
 
 Arrays in JavaScript are incredibly flexible. Unlike some older programming languages where arrays must have a fixed size and contain only one type of data, JavaScript arrays are resizable and can hold a mix of numbers, strings, booleans, objects, or even other arrays all at once.
 
+JavaScript array-copy operations create **shallow copies**. Because arrays are Reference (Non-Primitive) data types, assigning an array to a new variable doesn't duplicate the data. If you change the new array, the original array will also change because they share the exact same address in Heap memory.
+
+
 
 
 
