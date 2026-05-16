@@ -483,6 +483,10 @@ These are the everyday tools you'll use to add, remove, and query data inside ar
 
 - unshift(value) & shift(): Work at the start of the array. unshift forces a value to the front, shift removes the very first value.
 
+- Insight: Try to avoid using unshift() on massive arrays. Because it forcefully adds an item to the very beginning, the computer has to recalculate and shift the index number of every single other element in the array, which drains performance.
+
+
+
 
 
 
