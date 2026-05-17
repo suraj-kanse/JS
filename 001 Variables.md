@@ -51,3 +51,7 @@ Data Types:
 -- object: Complex data structures.
 
 JavaScript allows you to write messy code without semicolons or put multiple commands on a single line. Don't do it. Your highest priority as a developer should be writing code that is clean and easily readable by other humans
+
+MDN (Mozilla Developer Network): Your daily driver. It's the easiest and most practical place to read about JS features
+
+
