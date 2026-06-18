@@ -53,3 +53,30 @@ const cleanArray = messyArray.flat(Infinity);
 console.log(cleanArray); 
 // Output: [1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]
 ```
+
+Data Conversion: isArray, from, and of
+When scraping data from web pages (like grabbing a list of HTML elements), the data often comes back looking like an array, but it's actually a NodeList or a String. You can't run array loops (like .map()) on those. You must convert them first.
+
+Array.isArray(value): Asks a simple Yes/No question: "Is this officially an array?"
+
+Array.from(value): Forces a value (like a string) to convert into an array.
+
+Array.of(val1, val2): Creates a new array out of a random set of variables or elements.
+
+The Interview Trap (Important!)
+If you ask Array.from() to convert an object into an array, it gets confused. It doesn't know if it should make the array out of the object's keys or the object's values. Because it can't decide, it fails safely and returns an empty array.
+```
+// Converting a string
+console.log(Array.from("Suraj")); 
+// Output: ["S", "u", "r", "a", "j"]
+
+// Trap
+console.log(Array.from({name: "suraj"})); 
+// Output: [] (Empty array because we didn't specify keys or values)
+
+// Creating an array from scattered variables
+let score1 = 100;
+let score2 = 200;
+console.log(Array.of(score1, score2)); 
+// Output: [100, 200]
+```
