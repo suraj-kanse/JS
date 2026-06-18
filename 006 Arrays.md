@@ -104,12 +104,3 @@ const spliced = originalArray.splice(1, 3);
 console.log("Spliced Output:", spliced);     // Outputs: [1, 2, 3]
 console.log("Original after Splice:", originalArray); // Outputs: [0, 4, 5] (Mutated!)
 ```
-
-
-
-
-
-
-
-
-
