@@ -1,6 +1,4 @@
 
-
-
 ARRAYS:
 
 Arrays in JavaScript are incredibly flexible. Unlike some older programming languages where arrays must have a fixed size and contain only one type of data, JavaScript arrays are resizable and can hold a mix of numbers, strings, booleans, objects, or even other arrays all at once.
