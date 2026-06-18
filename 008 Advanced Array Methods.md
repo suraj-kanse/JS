@@ -39,3 +39,17 @@ const allNewHeroes = [...marvel, ...dc];
 console.log(allNewHeroes); 
 // Output: ["thor", "ironman", "superman", "batman"]
 ```
+
+Untangling Messy Data: flat()
+Sometimes you end up with data that looks like an absolute nightmare: an array inside an array inside an array. You can use the flat() method to smooth it all out into a single-level array.
+
+You pass a number into flat() to tell it how "deep" it should go to untangle the arrays.
+Pro-Tip: If you don't know exactly how deep the nesting goes, you can just pass the word Infinity and JavaScript will figure it out automatically!
+```
+const messyArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
+
+// Flatten all depths automatically
+const cleanArray = messyArray.flat(Infinity);
+console.log(cleanArray); 
+// Output: [1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]
+```
