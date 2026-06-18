@@ -24,3 +24,18 @@ Unlike push(), concat() properly merges the elements. Important distinction: con
 ```
 const allHeroes = marvelHeroes.concat(dcHeroes);
 ```
+
+2. The Spread Operator ... (Industry Standard & Highly Recommended)
+
+Analogy: Imagine holding a glass of water and dropping it on the floor. The glass shatters and the pieces "spread" everywhere.
+
+The spread operator does exactly this. It shatters the array brackets and spills the individual elements out. It is preferred over concat() because you can easily merge more than two arrays at once.
+```
+const marvel = ["thor", "ironman"];
+const dc = ["superman", "batman"];
+
+// Shatter both arrays and wrap them in a new one
+const allNewHeroes = [...marvel, ...dc];
+console.log(allNewHeroes); 
+// Output: ["thor", "ironman", "superman", "batman"]
+```
