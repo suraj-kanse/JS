@@ -80,3 +80,15 @@ let score2 = 200;
 console.log(Array.of(score1, score2)); 
 // Output: [100, 200]
 ```
+
+Summary & Points
+
+Never use push() to merge two arrays unless you intentionally want arrays nested inside each other.
+
+Use the Spread Operator (...) as your default tool for merging arrays. It is cleaner and scales perfectly.
+
+Use flat(Infinity) as a quick hack to untangle deeply nested data.
+
+When working with scraped data, always use Array.from() to guarantee the data is structured as a true array before trying to loop through it.
+
+Memorize for interviews: Array.from() on a standard object will return an empty array [].
