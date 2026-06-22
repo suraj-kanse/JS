@@ -1,9 +1,32 @@
 Declaring Objects (Singleton vs. Literals)
 There are two primary ways to declare an object:
 
-1. As a Constructor (Object.create): This creates a Singleton object (meaning it's the only instance of its kind).
+1. As a Constructor (Object.create) (Singleton): This creates a Singleton object (meaning it's the only instance of its kind).
 
-2. As an Object Literal ({}): This is the most common way we write objects daily. It does not create a singleton.
+2. As an Object Literal ({}) (Literal): This is the most common way we write objects daily. It does not create a singleton.
+
+An Object Literal is the most common, easiest, and fastest way to create an object. You simply define the object right on the spot using curly braces {}.
+
+Every time you create an object this way, you are creating a fresh, independent object (it is not a Singleton).
+```
+// Creating an object using a literal
+const smartphone = {
+    brand: "Motorola",
+    model: "Edge 40",
+    batteryLife: 100,
+    
+    // You can also add functions (methods) inside
+    call: function() {
+        console.log("Dialing number...");
+    }
+};
+
+// Accessing the data
+console.log(smartphone.brand); // Outputs: "Motorola"
+smartphone.call();             // Outputs: "Dialing number..."
+```
+
+
 ```
 // 1. The Literal Way (Standard Practice)
 const jsUser = {
