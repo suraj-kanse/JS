@@ -20,7 +20,8 @@ const user = {
 // Accessing the Symbol
 console.log(user[mySym]);
 ```
-
+<br/>
+<br/>
 Simple Explanation:
 
 The common mistake
@@ -63,17 +64,12 @@ const user = {
 // So the object becomes: { name: "Suraj" }
 
 ```
-<br>
-
-
-
-
-
-
-
-
-
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 Modifying and Freezing Objects
 Overwriting data is as simple as reassigning it with an equals sign. But what if you want to completely lock an object so nobody can change it? Use Object.freeze().
 ```
