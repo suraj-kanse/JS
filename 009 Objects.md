@@ -17,6 +17,34 @@ userProfile.isLoggedIn = true;
 
 console.log(userProfile.username); // Outputs: "suraj_sk"
 ```
+(Note: In terms of actual output, new Object() and {} act exactly the same. However, behind the scenes, the memory management and Singleton behavior are slightly different.)
+
+
+B. Custom Constructor Functions (The Blueprint)
+If you want to create many objects that all share the exact same structure (like creating 100 different users), you wouldn't write 100 object literals. You would create a custom constructor. It acts as a factory blueprint.
+
+```
+// This function is a Constructor (Notice the Capital 'U')
+function User(username, email, age) {
+    // 'this' refers to the specific object being created right now
+    this.username = username;
+    this.email = email;
+    this.age = age;
+    
+    this.login = function() {
+        console.log(`${this.username} has logged in!`);
+    };
+}
+
+// Now we can easily pump out as many unique users as we want using the 'new' keyword!
+const userOne = new User("suraj", "suraj@entp.com", 25);
+const userTwo = new User("pratik", "pratik@dfmg.com", 28);
+
+console.log(userOne.email); // Outputs: "suraj@entp.com"
+userTwo.login();            // Outputs: "pratik has logged in!"
+```
+
+
 
 2. As an Object Literal ({}) (Literal): This is the most common way we write objects daily. It does not create a singleton.
 
