@@ -98,7 +98,8 @@ console.log(jsUser["full name"]);
 // console.log(jsUser.full name); // THIS WILL CRASH
 ```
 
-
-
-
-
+<br/>
+Summary
+- Literal ({}): Great for making a quick, one-off object (like storing settings for a specific page).
+- Built-in Constructor (new Object()): Creates an empty Singleton object that you build out property by property.
+- Custom Constructor (function Name()): The best choice when you need a reusable blueprint to stamp out multiple objects with the same exact structure.
