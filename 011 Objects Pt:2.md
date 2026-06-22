@@ -18,3 +18,9 @@ const regularUser = {
 // Accessing nested data
 console.log(regularUser.fullName.userFullName.firstName); // Outputs: "suraj"
 ```
+- Tip for Crash Prevention: The Optional Chaining Tip (?)
+- In the real world, an API might fail to return the fullName object. If you try to access userFullName inside a missing object, your entire app will crash. To prevent this, you use Optional Chaining (?).
+```
+// The '?' asks: "Does fullName exist? If yes, continue. If no, stop and return undefined without crashing."
+console.log(regularUser.fullName?.userFullName.firstName);
+```
