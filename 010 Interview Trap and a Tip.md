@@ -6,11 +6,11 @@ If you just type the symbol name as a key, JavaScript converts it into a normal 
 const mySym = Symbol("key1");
 
 const user = {
-    name: "Hitesh",
-    // ❌ BAD: This becomes a normal string key
+    name: "Suraj",
+    // BAD: This becomes a normal string key
     // mySym: "myValue", 
     
-    // ✅ GOOD: This is officially a Symbol key
+    // GOOD: This is officially a Symbol key
     [mySym]: "myValue" 
 };
 
@@ -21,12 +21,12 @@ console.log(user[mySym]);
 Modifying and Freezing Objects
 Overwriting data is as simple as reassigning it with an equals sign. But what if you want to completely lock an object so nobody can change it? Use Object.freeze().
 ```
-jsUser.email = "hitesh@chatgpt.com"; // Successfully overwritten
+jsUser.email = "suraj@openai.com"; // Successfully overwritten
 
 // Locking the object
 Object.freeze(jsUser);
 
-jsUser.email = "hitesh@microsoft.com"; // This will be IGNORED.
-console.log(jsUser.email); // Outputs: "hitesh@chatgpt.com"
+jsUser.email = "suraj@anthropic.com"; // This will be IGNORED.
+console.log(jsUser.email); // Outputs: "suraj@openai.com"
 ```
 
