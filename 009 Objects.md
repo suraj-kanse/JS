@@ -18,13 +18,12 @@ userProfile.isLoggedIn = true;
 
 console.log(userProfile.username); // Outputs: "suraj_sk"
 ```
-(Note: In terms of actual output, new Object() and {} act exactly the same. However, behind the scenes, the memory management and Singleton behavior are slightly different.)
+-- (Note: In terms of actual output, new Object() and {} act exactly the same. However, behind the scenes, the memory management and Singleton behavior are slightly different.)
 
 
 
-B. Custom Constructor Functions **(The Blueprint)**
-- If you want to create many objects that all share the exact same structure (like creating 100 different users), you wouldn't write 100 object literals. You would create a custom constructor. It acts as a factory blueprint.
-
+- B. Custom Constructor Functions **(The Blueprint)**
+-- If you want to create many objects that all share the exact same structure (like creating 100 different users), you wouldn't write 100 object literals. You would create a custom constructor. It acts as a factory blueprint.
 ```
 // This function is a Constructor (Notice the Capital 'U')
 function User(username, email, age) {
