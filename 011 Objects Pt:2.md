@@ -61,5 +61,27 @@ const users = [
 // To get the email of the second user:
 // 1. Target the array index [1]
 // 2. Use dot notation for the object property
-console.log(users[1].email); // Outputs: "b@gmail.com"
+console.log(users[1].email); 
+// Outputs: "b@gmail.com"
 ```
+<br/>
+
+The 3 Essential Object Methods
+- When manipulating objects, you often need to convert their data into Arrays so you can run loops on them. JavaScript provides built-in methods on the Object constructor to do exactly this.
+- Assume we have this object:
+```
+const wAUser = { id: "123", name: "Vibey", isLoggedIn: false };
+```
+
+Object.keys(wAUser)
+What it does: Extracts only the keys and returns them as an Array.
+Output: ["id", "name", "isLoggedIn"]
+Use Case: Extremely common for looping through an object's properties.
+
+Object.values(wAUser)
+What it does: Extracts only the values and returns them as an Array.
+Output: ["123", "Vibey", false]
+
+Object.entries(wAUser)
+What it does: Converts every single key-value pair into its own mini-array, and puts them all inside one giant array.
+Output: [ ["id", "123"], ["name", "Vibey"], ["isLoggedIn", false] ]
