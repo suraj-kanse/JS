@@ -1,12 +1,12 @@
 Declaring Objects (Singleton vs. Literals)
 There are two primary ways to declare an object:
 
-1. As a Constructor (Object.create) (Singleton): This creates a Singleton object (meaning it's the only instance of its kind).
-
-When we talk about constructors in JavaScript, there are two ways to look at it: using the built-in Object constructor, or creating your own custom constructor blueprint.
+1. As a Constructor (Object.create) (Singleton): 
+- This creates a Singleton object (meaning it's the only instance of its kind).
+- When we talk about constructors in JavaScript, there are two ways to look at it: using the built-in Object constructor, or creating your own custom constructor blueprint.
 
 A. The Built-in new Object() (The Singleton)
-As the instructor mentioned in the video, using new Object() creates a Singleton. It means it is a unique, one-of-a-kind object in your application at that exact moment.
+Using new Object() creates a Singleton. It means it is a unique, one-of-a-kind object in your application at that exact moment.
 ```
 // Creating an empty object using the built-in constructor
 const userProfile = new Object(); 
@@ -18,6 +18,7 @@ userProfile.isLoggedIn = true;
 console.log(userProfile.username); // Outputs: "suraj_sk"
 ```
 (Note: In terms of actual output, new Object() and {} act exactly the same. However, behind the scenes, the memory management and Singleton behavior are slightly different.)
+
 
 
 B. Custom Constructor Functions (The Blueprint)
