@@ -21,6 +21,8 @@ const user = {
 console.log(user[mySym]);
 ```
 
+Simple Explanation:
+
 The common mistake
 Many people think this:
 ```
@@ -48,7 +50,7 @@ const mySym = Symbol("key1");
 
 const user = {
   [mySym]: "myValue"
-  // To tell JavaScript- Use the value stored inside mySym as the key
+  // []: To tell JavaScript- Use the value stored inside mySym as the key
 };
 ```
 Now JavaScript evaluates mySym first and uses the Symbol itself as the key.
@@ -61,8 +63,8 @@ const user = {
 // So the object becomes: { name: "Suraj" }
 
 ```
-
-
+<br>
+<br>
 Modifying and Freezing Objects
 Overwriting data is as simple as reassigning it with an equals sign. But what if you want to completely lock an object so nobody can change it? Use Object.freeze().
 ```
