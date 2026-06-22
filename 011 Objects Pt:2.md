@@ -73,15 +73,34 @@ The 3 Essential Object Methods
 const wAUser = { id: "123", name: "Vibey", isLoggedIn: false };
 ```
 
+
 Object.keys(wAUser)
 What it does: Extracts only the keys and returns them as an Array.
 Output: ["id", "name", "isLoggedIn"]
 Use Case: Extremely common for looping through an object's properties.
 
+
 Object.values(wAUser)
 What it does: Extracts only the values and returns them as an Array.
 Output: ["123", "Vibey", false]
 
+
 Object.entries(wAUser)
 What it does: Converts every single key-value pair into its own mini-array, and puts them all inside one giant array.
 Output: [ ["id", "123"], ["name", "Vibey"], ["isLoggedIn", false] ]
+
+
+Safety Checks: hasOwnProperty()
+Before trying to extract data from a key, it's a good practice to ask the object if that key even exists. This prevents errors.
+```
+console.log(wAUser.hasOwnProperty('isLoggedIn')); // Outputs: true
+console.log(wAUser.hasOwnProperty('isLogged'));   // Outputs: false
+```
+
+
+Summary & Takeaways
+- Use Optional Chaining (?) when accessing deeply nested data to prevent crashes if the data is missing.
+- The Spread Operator (...) is the cleanest and most modern way to merge objects.
+- Database responses are usually an Array of Objects. Use standard array indexing followed by dot notation to extract the data (e.g., data[0].id).
+- Object.keys() and Object.values() are your best friends because they convert object data into easily loopable Arrays.
+
