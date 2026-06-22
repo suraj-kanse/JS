@@ -5,8 +5,9 @@ There are two primary ways to declare an object:
 - This creates a Singleton object (meaning it's the only instance of its kind).
 - When we talk about constructors in JavaScript, there are two ways to look at it: using the built-in Object constructor, or creating your own custom constructor blueprint.
 
-A. The Built-in new Object() (The Singleton)
-Using new Object() creates a Singleton. It means it is a unique, one-of-a-kind object in your application at that exact moment.
+A. The Built-in **new Object()** keyword 
+- The Singleton
+- Using new Object() creates a Singleton. It means it is a unique, one-of-a-kind object in your application at that exact moment.
 ```
 // Creating an empty object using the built-in constructor
 const userProfile = new Object(); 
@@ -21,13 +22,13 @@ console.log(userProfile.username); // Outputs: "suraj_sk"
 
 
 
-B. Custom Constructor Functions (The Blueprint)
-If you want to create many objects that all share the exact same structure (like creating 100 different users), you wouldn't write 100 object literals. You would create a custom constructor. It acts as a factory blueprint.
+B. Custom Constructor Functions **(The Blueprint)**
+- If you want to create many objects that all share the exact same structure (like creating 100 different users), you wouldn't write 100 object literals. You would create a custom constructor. It acts as a factory blueprint.
 
 ```
 // This function is a Constructor (Notice the Capital 'U')
 function User(username, email, age) {
-    // 'this' refers to the specific object being created right now
+    // 'this' refers to the specific object being created right now (context & scope)
     this.username = username;
     this.email = email;
     this.age = age;
@@ -47,11 +48,10 @@ userTwo.login();            // Outputs: "pratik has logged in!"
 
 
 
-2. As an Object Literal ({}) (Literal): This is the most common way we write objects daily. It does not create a singleton.
-
-An Object Literal is the most common, easiest, and fastest way to create an object. You simply define the object right on the spot using curly braces {}.
-
-Every time you create an object this way, you are creating a fresh, independent object (it is not a Singleton).
+2. As an Object Literal ({}) (Literal)
+- This is the most common way we write objects daily. It does not create a singleton.
+- An Object Literal is the most common, easiest, and fastest way to create an object. You simply define the object right on the spot using curly braces {}.
+- Every time you create an object this way, you are creating a fresh, independent object (it is not a Singleton).
 ```
 // Creating an object using a literal
 const smartphone = {
@@ -85,7 +85,7 @@ const jsUser = {
 ```
 
 Accessing Object Data (The "Dot" vs "Bracket" Notation)
-Most tutorials only teach you the dot notation, but you must know the bracket notation for advanced scenarios.
+Many people assume that only the dot notation exist, but you must know the bracket notation for advanced scenarios.
 
 - Dot Notation (.): The easiest and most common way.
 
@@ -96,7 +96,7 @@ console.log(jsUser.email);
 
 // Bracket Notation (Mandatory for spaced keys!)
 console.log(jsUser["full name"]); 
-// console.log(jsUser.full name); // ❌ THIS WILL CRASH
+// console.log(jsUser.full name); // THIS WILL CRASH
 ```
 
 
