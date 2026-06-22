@@ -3,6 +3,21 @@ There are two primary ways to declare an object:
 
 1. As a Constructor (Object.create) (Singleton): This creates a Singleton object (meaning it's the only instance of its kind).
 
+When we talk about constructors in JavaScript, there are two ways to look at it: using the built-in Object constructor, or creating your own custom constructor blueprint.
+
+A. The Built-in new Object() (The Singleton)
+As the instructor mentioned in the video, using new Object() creates a Singleton. It means it is a unique, one-of-a-kind object in your application at that exact moment.
+```
+// Creating an empty object using the built-in constructor
+const userProfile = new Object(); 
+
+// Adding properties to it one by one
+userProfile.username = "suraj_sk";
+userProfile.isLoggedIn = true;
+
+console.log(userProfile.username); // Outputs: "suraj_sk"
+```
+
 2. As an Object Literal ({}) (Literal): This is the most common way we write objects daily. It does not create a singleton.
 
 An Object Literal is the most common, easiest, and fastest way to create an object. You simply define the object right on the spot using curly braces {}.
