@@ -73,6 +73,7 @@ const user = {
 Tip: Modifying and Freezing Objects
 Overwriting data is as simple as reassigning it with an equals sign. But what if you want to completely lock an object so nobody can change it? Use Object.freeze().
 <br/>
+
 ```
 jsUser.email = "suraj@openai.com"; // Successfully overwritten
 
