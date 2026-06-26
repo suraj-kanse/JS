@@ -38,3 +38,11 @@ JSON looks exactly like a JavaScript object, with two massive differences:
 The object itself has no name (it's not assigned to a variable like const user = {}).
 
 Both the Keys AND the Values must be wrapped in double quotes " " (unless the value is a number or boolean).
+```
+// Example of raw JSON data
+{
+    "name": "suraj",
+    "companyname": "AVCOE",
+    "year": "finalYear"
+}
+```
