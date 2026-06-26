@@ -17,3 +17,12 @@ const { companyDirector } = company;
 
 console.log(companyDirector); // Outputs: "suraj"
 ```
+
+Renaming during Destructuring
+- Sometimes, API keys or object property names are way too long (like companyDirector). You can instantly rename them while destructuring by using a colon : .
+```
+// Extract 'companyDirector', but immediately rename it to 'director'
+const { companyDirector: director } = company;
+
+console.log(director); // Outputs: "suraj"
+```
