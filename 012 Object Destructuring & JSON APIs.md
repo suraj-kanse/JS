@@ -3,7 +3,7 @@ Object Destructuring (The React Superpower)
 - Instead of writing objectName.propertyName over and over again, you do it once.
 ```
 const company = {
-    companyname: "JS in Hindi",
+    companyname: "Im very bad at naming!(Soorrie!)",
     sharesprice: 999,
     companyDirector: "suraj"
 }
