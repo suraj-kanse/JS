@@ -26,3 +26,15 @@ const { companyDirector: director } = company;
 
 console.log(director); // Outputs: "suraj"
 ```
+
+An Insight on React: If you ever look at React code and see ({ company, name }) inside a function parameter instead of (props), that is exactly what Object Destructuring is! React developers use this constantly to avoid typing props.company and props.name.
+
+The Basics of JSON & APIs
+When you ask a backend server for data (like asking a restaurant kitchen for a samosa), the data is returned to you as an API response. Today, 99% of modern APIs return this data in a format called JSON.
+
+What does JSON look like?
+JSON looks exactly like a JavaScript object, with two massive differences:
+
+The object itself has no name (it's not assigned to a variable like const user = {}).
+
+Both the Keys AND the Values must be wrapped in double quotes " " (unless the value is a number or boolean).
