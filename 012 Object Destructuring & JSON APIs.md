@@ -46,3 +46,20 @@ Both the Keys AND the Values must be wrapped in double quotes " " (unless the va
     "year": "finalYear"
 }
 ```
+
+How JSON is Delivered
+
+JSON can come in two primary structures when you hit an API (like the GitHub API or RandomUser API):
+- A Single Object: { "name": "suraj", "id": 123 }
+- An Array of Objects: [ {}, {}, {} ]
+
+When you receive a massive, unreadable wall of JSON text from an API, always copy/paste it into an online tool like JSON Formatter so you can visually understand if it's an Array or an Object, and figure out how to write your loops to extract the data.
+
+Summary & Takeaways
+
+- Destructuring (const { key } = object) is syntactic sugar to cleanly pull data out of objects.
+- You can rename variables while destructuring using a colon (const { oldName: newName } = object).
+- JSON is the universal format for API data transfer.
+- JSON is just a JavaScript object where both the keys and the string values must be in double quotes.
+- Always use a JSON Formatter tool when inspecting new APIs so you know if you are dealing with a root Object or a root Array.
+
