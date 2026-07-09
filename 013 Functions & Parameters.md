@@ -67,8 +67,8 @@ This is a major interview concept!
 
 To prevent weird behavior or undefined showing up on your website, you have two options:
 - 1. Check for undefined using an if statement (and the ! operator):
-     ```
-     function loginUserMessage(username) {
+```
+function loginUserMessage(username) {
     // The '!' converts undefined (a falsy value) into true, triggering the block
     if(!username) { 
         console.log("Please enter a username");
@@ -78,8 +78,19 @@ To prevent weird behavior or undefined showing up on your website, you have two 
 }
 
 loginUserMessage(); // Triggers the if block because username is undefined.
-     ```
+```
 
+- 2. Use Default Parameters (The Modern Way):
+You can assign a fallback value right in the parameter list. If the user passes real data, it overwrites the default. If they pass nothing, the default kicks in safely.
+```
+// "Sam" is the default fallback
+function loginUserMessage(username = "Sam") {
+    return `${username} just logged in`;
+}
+
+console.log(loginUserMessage());         // Outputs: "Sam just logged in"
+console.log(loginUserMessage("Suraj")); // Outputs: "Suraj just logged in"
+```
 
 
 
