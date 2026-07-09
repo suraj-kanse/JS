@@ -1,0 +1,15 @@
+Creating and Calling a Function
+
+There is a massive difference between referencing a function and executing it.
+```
+// 1. Defining the Function
+function sayMyName() {
+    console.log("Suraj");
+}
+
+// 2. Referencing the Function (Does nothing on its own!)
+sayMyName; 
+
+// 3. Executing the Function (Actually runs the code)
+sayMyName();
+```
