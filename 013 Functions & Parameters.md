@@ -89,10 +89,17 @@ function loginUserMessage(username = "Sam") {
 }
 
 console.log(loginUserMessage());         // Outputs: "Sam just logged in"
-console.log(loginUserMessage("Suraj")); // Outputs: "Suraj just logged in"
+console.log(loginUserMessage("Suraj"));  // Outputs: "Suraj just logged in"
 ```
+You can assign a fallback value right in the parameter list. If the user passes real data, it overwrites the default. If they pass nothing, the default kicks in safely.
 
-
+Summary & Takeaways
+- Adding () to a function's name executes it. Without (), you are just pointing to it.
+- Parameters are the placeholders; Arguments are the actual values you pass in.
+- console.log() only shows data to the developer; return gives data back to the program to be stored in variables.
+- Code written below a return statement is "unreachable" and will never run.
+- If an argument is missing, JavaScript evaluates it as undefined.
+- Use default parameters (username = "Guest") to safely handle missing data without writing clunky if statements.
 
 
 
