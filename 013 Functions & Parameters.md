@@ -19,3 +19,37 @@ sayMyName;
 sayMyName();
 ```
 
+(Pro-Tip: When working with buttons in React or the DOM later, you often just pass the reference sayMyName instead of executing it immediately with ().)
+
+Parameters vs. Arguments
+
+People use these words interchangeably, but technically they are different:
+- Parameters: The variables you create when defining the function (e.g., num1, num2).
+- Arguments: The actual raw data you pass in when calling the function (e.g., 3, 4).
+
+```
+// num1 and num2 are PARAMETERS
+function addTwoNumbers(num1, num2) {
+    console.log(num1 + num2);
+}
+
+// 3 and 4 are ARGUMENTS
+addTwoNumbers(3, 4);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
