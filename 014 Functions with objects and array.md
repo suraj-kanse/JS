@@ -57,20 +57,24 @@ handleObject({
     rollno: 368
 });
 ```
+- The "Type Safety" Trap: In plain JavaScript, the function blindly assumes the object you pass has a price property. If you accidentally pass an object where the key is prices (plural), the function won't crash, but it will print undefined. In professional environments, developers use if statements (or TypeScript) to check if the property actually exists before trying to use it.
 
 
+Passing Arrays into Functions
 
+Passing arrays works exactly the same way as passing objects. The function takes the array as a parameter, and you extract what you need using standard bracket indexing.
+```
+const myNewArray = [200, 400, 100, 600];
 
+function returnSecondValue(getArray) {
+    return getArray[1]; // Grabs the second item (index 1)
+}
 
+console.log(returnSecondValue(myNewArray)); // Outputs: 400
+```
 
-
-
-
-
-
-
-
-
-
-
-
+Summary & Takeaways
+- Use the Rest Operator (...) in your function parameters when you don't know how many arguments the user will pass.
+- The Rest operator always bundles incoming loose arguments into an Array.
+- If you mix standard parameters with a Rest parameter (val1, val2, ...rest), the Rest parameter must always be the very last one.
+- When passing objects into functions, always be aware that accessing a missing or misspelled property will result in undefined.
