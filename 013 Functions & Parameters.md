@@ -37,9 +37,48 @@ function addTwoNumbers(num1, num2) {
 addTwoNumbers(3, 4);
 ```
 
+The Biggest Beginner Trap: console.log vs return
+This is where most bugs originate. A function does not automatically give its result back to the rest of your program just because you console.log it.
+If you try to save a console.log function to a variable, the variable will be undefined.
+```
+// BAD: This just prints to the screen, it doesn't give the value back.
+function badAdd(num1, num2) {
+    console.log(num1 + num2);
+}
+const badResult = badAdd(3, 4); 
+console.log(badResult); // Outputs: undefined
 
 
+// GOOD: This explicitly hands the value back to the program.
+function goodAdd(num1, num2) {
+    return num1 + num2;
+    // Note: ANY code written after 'return' will never be executed.
+}
+const goodResult = goodAdd(3, 4);
+console.log(goodResult); // Outputs: 7
+```
 
+
+Handling Missing Arguments & Default Values:
+If a user forgets to pass an argument into your function, 
+JavaScript doesn't crash immediately; 
+it sets that parameter to undefined. 
+This is a major interview concept!
+
+To prevent weird behavior or undefined showing up on your website, you have two options:
+- 1. Check for undefined using an if statement (and the ! operator):
+     ```
+     function loginUserMessage(username) {
+    // The '!' converts undefined (a falsy value) into true, triggering the block
+    if(!username) { 
+        console.log("Please enter a username");
+        return; // Stops the function immediately
+    }
+    return `${username} just logged in`;
+}
+
+loginUserMessage(); // Triggers the if block because username is undefined.
+     ```
 
 
 
