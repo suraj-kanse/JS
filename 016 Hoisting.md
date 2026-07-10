@@ -23,14 +23,37 @@ function one() {
 }
 one();
 ```
+Note: This specific behavior—where the inner function retains access to the outer function's scope—is the foundational concept behind Closures in JavaScript.
 
+The Two Ways to Write Functions (Declarations vs. Expressions)
+Up until now, you've likely just written functions one way. But there is a second way that is extremely common in modern JavaScript.
 
+- Method 1: Function Declaration (The Standard Way)
+```
+function addOne(num) {
+    return num + 1;
+}
+```
+- Method 2: Function Expression (Storing in a Variable)
+Because JavaScript treats functions as "First-Class Citizens," you can store an entire function inside a variable.
+```
+const addTwo = function(num) {
+    return num + 2;
+}
+```
 
+"Mini-Hoisting" (The Interview Trap!)
+Now that you know the two ways to write functions, here is the massive "gotcha" that interviewers love to test. It all comes down to Execution Context (or "Hoisting").
 
+Scenario 1: Calling a Function Declaration early
+If you call a standard function before you actually write the code for it, JavaScript allows it. It "hoists" the function definition to the top of the file automatically.
+```
+console.log(addOne(5)); // Outputs: 6
 
-
-
-
+function addOne(num) {
+    return num + 1;
+}
+```
 
 
 
