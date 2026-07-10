@@ -25,9 +25,20 @@ if (true) {
 console.log("Outer a:", a); // Outputs: 300 (The global 'a' is safe and untouched!)
 ```
 
+The Problem with var (Interview Essential)
 
+Why did the JavaScript community replace var with let and const? Because var does not respect block scope.
 
+If you declare a variable with var inside an if statement or a loop, it completely ignores the { } boundaries and leaks out into the Global Scope, accidentally overwriting other variables.
+```
+var c = 300; // A developer wrote this at the top of the file
 
+if (true) {
+    var c = 30; // Another developer wrote an 'if' block and re-used 'c'
+}
+
+console.log(c); // Outputs: 30 (The global 'c' was permanently overwritten!)
+```
 
 
 
