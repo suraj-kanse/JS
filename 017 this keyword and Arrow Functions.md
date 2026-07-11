@@ -70,7 +70,13 @@ const returnUser = () => { username: "suraj" };
 const returnUser = () => ({ username: "suraj" });
 ```
 
-
+Summary & Takeaways
+- this refers to the current context (usually the object you are inside).
+- In Node.js, the global this is an empty object {}. In the browser, it is the Window object.
+- Arrow Functions drop the function keyword and use =>.
+- Explicit Return: If you open a block with { }, you must type return.
+- Implicit Return: If you use ( ) or no brackets, the return happens automatically.
+- To implicitly return an Object in one line, you must wrap it in parentheses: ({ key: "value" }).
 
 
 
