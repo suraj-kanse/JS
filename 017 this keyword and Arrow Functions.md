@@ -27,8 +27,12 @@ user.username = "sam";
 user.welcomeMessage(); // Outputs: "sam, welcome to the website"
 ```
 
+**Interview Trap: The Global this**
+What happens if you run console.log(this) completely on its own in the global scope?
+- In Node.js (Terminal/VS Code): It returns an empty object {} because there is no global context defined yet.
+- In the Browser (Chrome Console): It returns the Window object! (This is how you capture click events and alerts). Interviewers love asking this.
 
-
+If you define a standard function and log this inside it (in Node), you get a massive global object with lots of internal Node processes. However, you cannot use this.variableName inside a standard Node function. It will return undefined. this is primarily used inside Objects.
 
 
 
