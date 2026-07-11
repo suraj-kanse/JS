@@ -35,10 +35,26 @@ What happens if you run console.log(this) completely on its own in the global sc
 If you define a standard function and log this inside it (in Node), you get a massive global object with lots of internal Node processes. However, you cannot use this.variableName inside a standard Node function. It will return undefined. this is primarily used inside Objects.
 
 
+Arrow Functions (The Modern Syntax)
+- To write an Arrow Function, you completely remove the function keyword and put a fat arrow => after the parameters.
 
+1. Explicit Return (Standard Arrow Function)
+If you use curly braces { }, you must write the return keyword.
+```
+const addTwo = (num1, num2) => {
+    return num1 + num2;
+}
+```
 
+2. Implicit Return (One-Liner)
+If you have a very short function, you can put it on one line. 
+By dropping the curly braces, JavaScript implicitly assumes you want to return the result, so you don't write return.
+```
+const addTwo = (num1, num2) => num1 + num2;
 
-
+// Or, wrap it in parentheses for readability (Highly used in React!)
+const addTwo = (num1, num2) => (num1 + num2);
+```
 
 
 
