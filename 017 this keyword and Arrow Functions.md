@@ -56,10 +56,19 @@ const addTwo = (num1, num2) => num1 + num2;
 const addTwo = (num1, num2) => (num1 + num2);
 ```
 
+The React Pro-Tip:
+- { } = Must write return
+- ( ) = Do NOT write return
 
+The Object Return Trap
+What if your one-line Arrow Function needs to return an Object?
+```
+// BAD: JavaScript thinks the curly braces are a function block, not an object. Returns undefined.
+const returnUser = () => { username: "suraj" };
 
-
-
+// GOOD: You MUST wrap the object in parentheses so JavaScript knows it's data to be returned implicitly.
+const returnUser = () => ({ username: "suraj" });
+```
 
 
 
