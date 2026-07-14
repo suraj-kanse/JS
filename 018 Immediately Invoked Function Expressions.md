@@ -44,7 +44,13 @@ You pass the arguments into the second set of parentheses (the execution call), 
 } )("Suraj"); // "Suraj" is the Argument being passed in
 ```
 
-
+Summary & Takeaways
+- What is an IIFE? An Immediately Invoked Function Expression. It runs the millisecond it is defined.
+- Why use it? (Interview Answer): To prevent variables and logic inside the function from polluting or conflicting with the Global Scope. It is frequently used to initialize database connections upon application startup.
+- The Syntax: Wrap the function in () and execute it with ().
+- The Semicolon Trap: If writing multiple IIFEs in a row, you must terminate the first one with a semicolon ;, otherwise, the compiler gets confused and throws a fatal error.
+- Named vs. Unnamed: An IIFE can be a standard function with a name (Named IIFE) or an anonymous Arrow Function (Unnamed IIFE).
+- Passing Data: Data is passed into the final execution parentheses, e.g., (function(name){...})("Suraj").
 
 
 
