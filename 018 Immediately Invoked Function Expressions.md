@@ -33,8 +33,16 @@ Interviewers love to ask candidates to write two IIFEs back-to-back in the same 
 })();
 ```
 
+Passing Arguments into an IIFE
+If your IIFE requires data (like a username or a port number), how do you pass it in if it executes immediately?
 
-
+You pass the arguments into the second set of parentheses (the execution call), just like you would with a normal function call. The first set of parentheses (the definition) receives it as a parameter.
+```
+// 'name' is the Parameter catching the data
+( (name) => {
+    console.log(`DB CONNECTED TWO for ${name}`);
+} )("Suraj"); // "Suraj" is the Argument being passed in
+```
 
 
 
