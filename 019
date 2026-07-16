@@ -1,0 +1,25 @@
+To truly master JavaScript, you must understand exactly how it reads and executes your code behind the scenes. JavaScript runs code in two distinct phases: it first scans through everything to allocate memory, and only then does it actually execute the logic. Understanding this two-step process, combined with the Call Stack, answers almost every confusing behavior in JavaScript (like Hoisting).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
