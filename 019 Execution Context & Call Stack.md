@@ -8,13 +8,14 @@ When you hand a .js file to the JavaScript engine, the very first thing it doesâ
 - - Interview Trap: The value of this changes depending on your environment. If you run JavaScript in a Browser, this equals the Window object. If you run it in Node.js, this equals an empty object {}.
 - Function Execution Context: Every single time a function is invoked, JavaScript creates a brand new, temporary "sandbox" for that function to run in.
 - Eval Execution Context: (Advanced/Rare) Used when executing code inside the eval() function. You can mostly ignore this unless asked specifically.
+(Important Note: JavaScript is a single-threaded language, meaning it executes one command at a time in a specific sequence).
 
-
-
-
-
-
-
+The Two Phases of Execution
+When a JavaScript file is processed, it goes through two mandatory phases:
+Phase 1: Memory Creation Phase (or just "Creation Phase")
+In this phase, JavaScript reads through your entire file line-by-line, but it does not execute any math or logic. Its only job is to find variables and functions and allocate memory space for them.
+- For Variables (let, const, var): It allocates memory and sets their initial value to undefined. (It doesn't care if you wrote let val1 = 10;, it will store it as undefined in this phase).
+- For Functions: It takes the entire block of code (the function definition) and stores it in memory exactly as written.
 
 
 
