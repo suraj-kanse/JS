@@ -17,12 +17,16 @@ In this phase, JavaScript reads through your entire file line-by-line, but it do
 - For Variables (let, const, var): It allocates memory and sets their initial value to undefined. (It doesn't care if you wrote let val1 = 10;, it will store it as undefined in this phase).
 - For Functions: It takes the entire block of code (the function definition) and stores it in memory exactly as written.
 
+Phase 2: Execution Phase
+Once the memory is allocated, JavaScript reads through the file a second time from top to bottom. Now, it actually executes the math and assigns the real values.
+- Variables that were undefined are now assigned their actual values (e.g., val1 becomes 10).
+- If a function is called, JavaScript pauses the main execution and creates a New Variable Environment + Execution Thread (a new Execution Context sandbox).
 
-
-
-
-
-
+The Function Sandbox (The "Mini" Execution Context)
+When a function is executed, it spins up its own mini-version of the two phases:
+- Memory Phase: It finds all parameters and internal variables and sets them to undefined.
+- Execution Phase: It assigns the arguments passed in, does the math, and determines the return value.
+- Return & Destruction: The return value is passed back to the parent/Global Execution Context. Immediately after, the function's Execution Context sandbox is completely deleted from memory.
 
 
 
