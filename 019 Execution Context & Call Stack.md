@@ -36,6 +36,9 @@ If functions open up temporary execution sandboxes, how does JavaScript keep tra
 How it works:
 - The Global Execution Context is placed at the very bottom of the stack. It stays there until the program finishes.
 - When functionOne() is called, it is pushed onto the stack.
+- If functionOne() finishes, it is popped off the stack.
+- The Nested Scenario: If functionOne() calls functionTwo(), functionTwo() is pushed on top of functionOne(). If functionTwo() calls functionThree(), functionThree() is pushed to the top.
+- Execution Order: JavaScript must finish and pop off functionThree() before it can finish functionTwo(), and so on. (LIFO rule).
 
 
 
