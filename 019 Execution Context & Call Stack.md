@@ -49,7 +49,12 @@ Visualizing the Call Stack (Chrome DevTools Pro-Tip)
 - Click run. In the right-hand panel, you can physically watch the Call Stack section update as functions are pushed onto the stack and popped off as you step through the code!
 
 
-
+Summary & Takeaways
+- Two-Phase Execution: JavaScript always processes code in two passes: Memory Creation (allocating variables to undefined and storing function definitions) and Execution (assigning real values and running logic).
+- The Global this: In a browser, this is the Window object. In Node, it is {}.
+- Function Contexts are Temporary: Every time a function is called, it creates a new Execution Context. Once the function returns a value, that specific context is immediately deleted.
+- The Call Stack (LIFO): JavaScript tracks running functions using a "Last In, First Out" stack. If Function A calls Function B, Function B sits on top and must finish before Function A can resume.
+- Chrome DevTools: You can visually inspect the Call Stack by using Breakpoints in the "Sources" tab of the browser inspector.
 
 
 
