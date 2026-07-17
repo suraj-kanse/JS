@@ -41,8 +41,12 @@ How it works:
 - Execution Order: JavaScript must finish and pop off functionThree() before it can finish functionTwo(), and so on. (LIFO rule).
 
 
-
-
+Visualizing the Call Stack (Chrome DevTools Pro-Tip)
+- Open Chrome, right-click, and select Inspect.
+- Go to the Sources tab.
+- Create a "Snippet" and write some nested functions.
+- Add Breakpoints (clicking the line numbers so they turn blue).
+- Click run. In the right-hand panel, you can physically watch the Call Stack section update as functions are pushed onto the stack and popped off as you step through the code!
 
 
 
