@@ -41,6 +41,13 @@ How it works:
 - Execution Order: JavaScript must finish and pop off functionThree() before it can finish functionTwo(), and so on. (LIFO rule).
 
 
+What happens if Function 1 calls Function 2, and Function 2 calls Function 3?
+- Global Context is at the bottom.
+- Function 1 goes on top.
+- Because Function 1 calls Function 2, Function 1 pauses, and Function 2 goes on top.
+- Function 2 calls Function 3. Function 3 goes to the very top.
+- Who finishes first? (LIFO): Because Function 3 was the Last In, it must be the First Out. Function 3 finishes and is removed. Then Function 2 finishes. Finally, Function 1 finishes.
+
 Visualizing the Call Stack (Chrome DevTools Pro-Tip)
 - Open Chrome, right-click, and select Inspect.
 - Go to the Sources tab.
