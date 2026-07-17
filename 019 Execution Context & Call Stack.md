@@ -28,6 +28,33 @@ When a function is executed, it spins up its own mini-version of the two phases:
 - Execution Phase: It assigns the arguments passed in, does the math, and determines the return value.
 - Return & Destruction: The return value is passed back to the parent/Global Execution Context. Immediately after, the function's Execution Context sandbox is completely deleted from memory.
 
+The Call Stack
+If functions open up temporary execution sandboxes, how does JavaScript keep track of which function is currently running, especially if functions call other functions? It uses the Call Stack.
+- Think of the Call Stack like a stack of plates.
+- LIFO (Last In, First Out): The last plate placed on top of the stack is the first plate that must be removed.
+
+How it works:
+- The Global Execution Context is placed at the very bottom of the stack. It stays there until the program finishes.
+- When functionOne() is called, it is pushed onto the stack.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
